@@ -1,6 +1,6 @@
 import axios from 'axios'
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 const LoginBus = () => {
     const [data,setData]=useState(
@@ -23,7 +23,9 @@ const LoginBus = () => {
                         console.log(response.data)
                         if(response.data.status=="success")
                             {
-                                alert("Successfully added")
+                                sessionStorage.setItem("token",response.data.token)
+                                sessionStorage.setItem("userid",response.data.userid)
+                                navigate("/add")
                             }
                         else{
                             alert("Error")
@@ -37,6 +39,8 @@ const LoginBus = () => {
             
        
     }
+  let navigate=useNavigate()
+
   return (
     <div>
         <div className="container">
@@ -51,10 +55,10 @@ const LoginBus = () => {
                     <input type="password"  id="" className="form-control" name='pass' value={data.pass} onChange={inputHandler} />
                 </div>
                 <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                    <button className="btn btn-success" onClick={readValue}>Login</button>
+                    <center><button className="btn btn-success" onClick={readValue}>Login</button></center>
                 </div>
                 <div>
-                <Link class="nav-link" to="/signup">SIGNUP</Link>
+                <center><Link class="SIGNUP" to="/signup">SIGNUP</Link></center>
                 </div>
                 
             </div>
