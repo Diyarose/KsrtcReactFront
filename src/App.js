@@ -5,6 +5,7 @@ import SignupBus from './components/SignupBus';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import AddBus from './components/AddBus';
 import ViewBus from './components/ViewBus';
+import SearchBus from './components/SearchBus';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
     <Route path='/signup' element={<SignupBus/>}/>
     <Route path='/add' element={<AddBus/>}/>
     <Route path='/view' element={<ViewBus/>}/>
+    <Route path='/search' element={<SearchBus/>}/>
 
    </Routes>
    </BrowserRouter>
