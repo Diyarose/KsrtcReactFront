@@ -23,7 +23,7 @@ const SearchBus = () => {
             }
         ).catch().finally()
     }
-    const deleteCourse = (id) => {
+    const deleteBus = (id) => {
         let input = { "_id": id }
         axios.post("http://localhost:8080/delete", input).then(
             (response) => {
@@ -41,6 +41,9 @@ const SearchBus = () => {
         <div>
             <NavBar />
             <div className="container">
+            <h1><center><i>SEARCH BUS</i></center></h1>
+            <br></br>
+                <div className="row g-3">
                 <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                     <label htmlFor="" className="form-label">Bus Name</label>
                     <input type="text" className="form-control" name='busname' value={data.busname} onChange={inputHandler} />
@@ -68,7 +71,7 @@ const SearchBus = () => {
                                             <td>{value.busno}</td>
                                             <td>{value.dname}</td>
                                             <td>
-                                                <button className="btn btn-danger" onClick={() => { deleteCourse(value._id) }}>Delete</button>
+                                                <button className="btn btn-danger" onClick={() => { deleteBus(value._id) }}>Delete</button>
                                             </td>
                                         </tr>
                                     }
@@ -76,6 +79,7 @@ const SearchBus = () => {
 
                             </tbody>
                         </table>
+                        </div>
                     </div>
                 </div>
             </div>

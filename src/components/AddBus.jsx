@@ -43,6 +43,7 @@ const AddBus = () => {
         <NavBar/>
         <div className="container">
             <h1><center><i>ADD BUSES</i></center></h1>
+            <br></br>
             <div className="row">
                 <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                     <div className="row g-3">
@@ -62,8 +63,8 @@ const AddBus = () => {
                             <label htmlFor="" className="form-label">Driver Name</label>
                             <input type="text" className="form-control" name='dname' value={data.dname} onChange={inputHandler} />
                         </div>
-                        <div className="col col-12 col-sm-6-col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-                            <button className="btn btn-success" onClick={readValue}>ADD</button>
+                        <div className="col col-12 col-sm-12-col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                            <center><button className="btn btn-success" onClick={readValue}>ADD</button></center>
                         </div>
                         
                     </div>

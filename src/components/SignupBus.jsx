@@ -1,6 +1,6 @@
 import axios from 'axios'
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 const SignupBus = () => {
     const [data,setData]=useState(
@@ -26,7 +26,9 @@ const SignupBus = () => {
                         console.log(response.data)
                         if(response.data.status=="success")
                             {
-                                alert("Successfully added")
+                                sessionStorage.setItem("token",response.data.token)
+                                sessionStorage.setItem("userid",response.data.userid)
+                                navigate("/add")
                             }
                         else{
                             alert("Error")
@@ -42,6 +44,7 @@ const SignupBus = () => {
             alert("error in password")
         }
     }
+    let navigate=useNavigate()
   return (
     <div>
         <div className="container">
@@ -73,15 +76,13 @@ const SignupBus = () => {
                             <label htmlFor="" className="form-label">Confirm Password</label>
                             <input type="password"  id="" className="form-control" name='conpass' onChange={inputHandler} />
                         </div>
-                        <div className="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-                            <button className="btn btn-success" onClick={readValue}>SignUp</button>
+                        <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                           <center><button className="btn btn-success" onClick={readValue}>SignUp</button></center> 
                         </div>
                         <div>
-                        <Link class="nav-link" to="/">Login</Link>
+                        <center><Link class="new user" to="/">Login</Link></center>
                         </div>
-                        <div>
-                        <Link class="nav-link" to="/add">ADD BUSES</Link>
-                        </div>
+                        
                     </div>
                 </div>
             </div>

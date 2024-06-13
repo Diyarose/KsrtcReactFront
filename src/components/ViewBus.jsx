@@ -22,6 +22,8 @@ const ViewBus = () => {
         <div>
             <NavBar/>
             <div className="container">
+            <h1><center><i>VIEW LIST</i></center></h1>
+            <br></br>
                 <div className="row">
                     <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                         <div className="row">
