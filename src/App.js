@@ -4,6 +4,7 @@ import LoginBus from './components/LoginBus';
 import SignupBus from './components/SignupBus';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import AddBus from './components/AddBus';
+import ViewBus from './components/ViewBus';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
     <Route path='/' element={<LoginBus/>}/>
     <Route path='/signup' element={<SignupBus/>}/>
     <Route path='/add' element={<AddBus/>}/>
+    <Route path='/view' element={<ViewBus/>}/>
 
    </Routes>
    </BrowserRouter>
