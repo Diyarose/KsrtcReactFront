@@ -1,5 +1,6 @@
 import axios from 'axios'
 import React, { useState } from 'react'
+import NavBar from './NavBar'
 
 const AddBus = () => {
 
@@ -39,6 +40,7 @@ const AddBus = () => {
     }
   return (
     <div>
+        <NavBar/>
         <div className="container">
             <h1><center><i>ADD BUSES</i></center></h1>
             <div className="row">
