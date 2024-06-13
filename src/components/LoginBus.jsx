@@ -56,6 +56,7 @@ const LoginBus = () => {
                 <div>
                 <Link class="nav-link" to="/signup">SIGNUP</Link>
                 </div>
+                
             </div>
         </div>
     </div>

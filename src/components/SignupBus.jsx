@@ -79,6 +79,9 @@ const SignupBus = () => {
                         <div>
                         <Link class="nav-link" to="/">Login</Link>
                         </div>
+                        <div>
+                        <Link class="nav-link" to="/add">ADD BUSES</Link>
+                        </div>
                     </div>
                 </div>
             </div>
